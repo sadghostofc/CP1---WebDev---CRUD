@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Craques do Futebol Feminino</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Cadastro de Jogadoras</h1>
+    </header>
+    <main>
+      <section id="form-container">
+        <h2>Adicionar Jogadoras</h2>
+
+        <form id="player-form">
+          <input type="hidden" id="player-id" />
+          <div class="form-group">
+            <label for="name">Nome:</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Digite o Nome da Jogadora"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="posicao">Posição:</label>
+            <select name="posicao" id="posicao" required>
+              <option value="" disabled selected>Selecione uma posição</option>
+              <option value="Goleira">Goleira</option>
+              <option value="Zagueira">Zagueira</option>
+              <option value="Meio-campo">Meio-campo</option>
+              <option value="Atacante">Atacante</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="clube">Clube:</label>
+            <input
+              type="text"
+              id="clube"
+              placeholder="Digite o Nome do Clube"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="foto">URL da foto:</label>
+            <input type="url" id="foto" placeholder="Digite a URL" required />
+          </div>
+
+          <div class="form-group">
+            <label for="gols">Gols:</label>
+            <input
+              type="number"
+              id="gols"
+              placeholder="Digite o número de Gols"
+              min="0"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="assistencias">Assistências</label>
+            <input
+              type="number"
+              id="assistencias"
+              placeholder="Digite o número de Assistências"
+              min="0"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="jogos">Jogos:</label>
+            <input
+              type="number"
+              id="jogos"
+              placeholder="Digite o número de Jogos"
+              min="0"
+              required
+            />
+          </div>
+
+          <div class="form-buttons">
+            <button type="submit" id="submit-button">Salvar Jogadora</button>
+            <button type="button" id="btn-cancelar">Cancelar</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="players-list-container">
+        <h2>Lista de Jogadoras</h2>
+        <div id="players-list" class="cards-container"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; Craques do Futebol Feminino</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

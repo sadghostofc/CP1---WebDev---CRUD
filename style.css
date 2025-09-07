@@ -1,0 +1,234 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  background-color: #feb236;
+}
+
+header {
+  background-color: #6b5b95;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  & h1 {
+    color: #212121;
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 20px;
+  width: 100%;
+}
+
+#form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  width: 100%;
+
+  & h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+}
+
+#player-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+  background-color: #6b5b95;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #6b5b95;
+}
+
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  & label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #212121;
+  }
+
+  & input,
+  & select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  & input:focus,
+  & select:focus {
+    border-color: #ff6f61;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+  }
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 10px;
+
+  & button {
+    flex-grow: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+}
+
+#submit-button {
+  background-color: #ff6f61;
+  color: white;
+
+  &:hover {
+    background-color: #ff3b2e;
+  }
+}
+
+#btn-cancelar {
+  background-color: #f0f0f0;
+  color: #333;
+
+  &:hover {
+    background-color: #ddd;
+  }
+}
+
+#players-list-container {
+  width: 100%;
+
+  & h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #212121;
+    margin-bottom: 20px;
+  }
+}
+
+.btn-action {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.btn-favorite {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem; 
+    color: #ccc; 
+    transition: color 0.2s, transform 0.2s;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+
+    &.favorita {
+        color: #ffd700; 
+    }
+}
+
+
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.player-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  & img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  & .card-info {
+    padding: 15px;
+
+    & h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    & p {
+      margin: 5px;
+      font-size: 0.9rem;
+    }
+  }
+
+  & .card-actions {
+    margin-top: 15px;
+    padding: 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+  }
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+@media (min-width: 992px) {
+  main {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  #form-container {
+    width: 40%;
+  }
+
+  #players-list-container {
+    width: 60%;
+  }
+}
